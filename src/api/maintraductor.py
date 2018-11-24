@@ -20,6 +20,7 @@ for language in language['languages']:
         counter = 0
 
 translation = language_translator.translate(
+<<<<<<< HEAD
     text='Hello',
     model_id= s +'-es').get_result()
 #print(json.dumps(translation, indent=2, ensure_ascii=False))
@@ -27,6 +28,5 @@ counter = 0
 for translations in translation["translations"]:
     print (json.dumps(translation["translations"][counter]['translation']))
     counter = counter + 1
-
 
 

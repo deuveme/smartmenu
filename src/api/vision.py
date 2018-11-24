@@ -3,13 +3,25 @@ import requests
 
 VISION_API_KEY = "AIzaSyAZtRpcJdd9mhTk_iMz4s5ss7O3lJwH9yM"
 
+image = cv2.imread('../resources/menu1.jpg')
+import base64
+
+# Pass the image data to an encoding function.
+def encode_image(image):
+  image_content = image.read()
+  return base64.b64encode(image_content)
+
+IMAGE_ENCODED = encode_image(image); 
+
+
+
+
 payload = {
   "requests": [
     {
       "image": {
-        "source": {
-          "imageUri": "http://cafecomercialmadrid.com/wp-content/uploads/2017/04/menu-restaurant-cafe-comercial.jpg"
-        }
+        "content": "IMAGE_ENCODED"
+          
       },
       "features": [
         {

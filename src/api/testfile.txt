@@ -1,0 +1,14 @@
+Plato: Croque monsieur jambon / Precio: 190 
+Plato: Croque chèvre tomate / Precio: 190 
+Plato: Croque chèvre lardons / Precio: 190 
+Plato: Quiche lorraine / Precio: 190 
+Plato: Tarte poireaux / Precio: 190 
+Plato: Tarte saumon oseille / Precio: 190 
+Plato: Tarte oignons lardons / Precio: 190 
+Plato: Croque monsieur jambon / Precio: 190 
+Plato: Croque chèvre tomate / Precio: 190 
+Plato: Croque chèvre lardons / Precio: 190 
+Plato: Quiche lorraine / Precio: 190 
+Plato: Tarte poireaux / Precio: 190 
+Plato: Tarte saumon oseile / Precio: 190 
+Plato: Tarte oignons lardons / Precio: 190 

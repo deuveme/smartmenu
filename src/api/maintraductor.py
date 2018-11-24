@@ -23,8 +23,10 @@ def idioma(texto):
         model_id= s +'-es').get_result()
     #print(json.dumps(translation, indent=2, ensure_ascii=False))
     counter = 0
+    result = ""
     for translations in translation["translations"]:
-        print (json.dumps(translation["translations"][counter]['translation']))
+        result += json.dumps(translation["translations"][counter]['translation']) + " "
         counter = counter + 1
+    return result
 
 

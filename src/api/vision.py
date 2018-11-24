@@ -21,9 +21,25 @@ payload = {
   ]
 }
 
-kk = {}
+payload2 = {
+  "polla":[
+    {
+      "image":{
+        "content":"/9j/7QBEUGhvdG9...image contents...eYxxxzj/Coa6Bax//Z"
+      },
+      "features":[
+        {
+          "type":"LABEL_DETECTION",
+          "maxResults":1
+        }
+      ]
+    }
+  ]
+}
 
-response = requests.post('https://vision.googleapis.com/v1/images:annotate?key=' + VISION_API_KEY, payload).json()
+
+
+response = requests.post('https://vision.googleapis.com/v1/images:annotate?key=' + VISION_API_KEY, json=payload).json()
 
 print(response)
 

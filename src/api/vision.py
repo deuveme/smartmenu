@@ -1,10 +1,11 @@
 import requests
-
+import matplotlib.image
+import base64
 
 VISION_API_KEY = "AIzaSyAZtRpcJdd9mhTk_iMz4s5ss7O3lJwH9yM"
 
-image = cv2.imread('../resources/menu1.jpg')
-import base64
+image = matplotlib.image.imread('../resources/menu1.jpg')
+
 
 # Pass the image data to an encoding function.
 def encode_image(image):

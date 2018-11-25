@@ -74,10 +74,10 @@ def sort_platos(plato):
     return plato['x'] + plato['y']
 
 
-imgpath = "resources/yeah.jpg"
-with open(imgpath, "rb") as imageFile:
-   yeah = base64.b64encode(imageFile.read()).decode('utf-8')
-imgpath = yeah
+#imgpath = "resources/yeah.jpg"
+#with open(imgpath, "rb") as imageFile:
+#   yeah = base64.b64encode(imageFile.read()).decode('utf-8')
+#imgpath = yeah
 
 def hace_todo(imgpath):
 
@@ -159,4 +159,4 @@ def hace_todo(imgpath):
 
     file.close()
 
-hace_todo(imgpath)
+#hace_todo(imgpath)

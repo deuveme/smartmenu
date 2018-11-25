@@ -53,8 +53,9 @@ def es_num(palabra):
         return False
 
 
-def obtener_precio(stringPrecio):
-    #stringPrecio = stringPrecio.replace(',', '.')
+def obtener_precio_traducido(stringPrecio):
+    if stringPrecio.find(',') != -1:
+        stringPrecio = stringPrecio.replace(',', '.')
     numero = re.findall(r'-?\d+\.?\d*', stringPrecio)
     if len(numero) <= 0:
         return "error"
@@ -68,6 +69,29 @@ def obtener_precio(stringPrecio):
     else:
         numero = numero * 1.13033
     return str(round(numero, 2)) + " CHF"
+
+def obtener_precio(stringPrecio):
+    if stringPrecio.find(',') != -1:
+        stringPrecio = stringPrecio.replace(',', '.')
+    numero = re.findall(r'-?\d+\.?\d*', stringPrecio)
+    char = "€"
+    if len(numero) <= 0:
+        return "error"
+    numero = float(numero[0])
+
+    if stringPrecio.find('$') != -1:
+        char = '$'
+
+    elif stringPrecio.find('CZK') != -1:
+        char = 'CZK'
+
+    elif stringPrecio.find('CHF') != -1:
+        char = 'CHF'
+
+    elif stringPrecio.find('£') != -1:
+        char = '£'
+    return str(round(numero, 2)) + " " + char
+
 
 
 def sort_platos(plato):
@@ -146,11 +170,13 @@ def hace_todo(imgpath):
     platos = sorted(platos, key=sort_platos)
     platosFinal = []
     for plato in platos:
-        platoFinal = {}
-        platoFinal['nombre'] = plato['nombre']
-        platoFinal['precio'] = obtener_precio(plato['precio'])
-        if platoFinal['precio'] != "error":
-            platosFinal.append(platoFinal)
+        if plato["nombre"] != "" and plato["precio"] != "":
+            platoFinal = {}
+            platoFinal['nombre'] = plato['nombre']
+            platoFinal['precioTraducido'] = obtener_precio_traducido(plato['precio'])
+            platoFinal['precio'] = obtener_precio(plato['precio'])
+            if platoFinal['precio'] != "error":
+                platosFinal.append(platoFinal)
 
     #for plato in platosFinal:
     #    if plato['nombre'] != "" and plato['precio'] != "":

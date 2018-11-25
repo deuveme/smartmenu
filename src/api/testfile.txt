@@ -1,13 +1,26 @@
-Plato: Manchuria vegetal/ Precio: 80-00 
-Plato: Gobi Manchuria/ Precio: 100-00 
-Plato: Paneer Manchuria/ Precio: 120-00 
-Plato: Manchuria De Setas/ Precio: 120-00 
-Plato: paneer/ Precio: 65 120-00 
-Plato: Vegetal/ Precio: 65 120-00 
-Plato: De la fritura/ Precio: 70-00 
-Plato: Tamato Curry/ Precio: 70-00 
-Plato: Palak liso/ Precio: 80-00 
-Plato: Curry de verduras/ Precio: 100-0 
-Plato: Kadai Vegetal/ Precio: 120-00 
-Plato: Swiss Spl. Curry de verduras/ Precio: 120-00 
-Plato: Kadal Paneer/ Precio: 120-00 
+Plato: Alas sin hueso/ Precio: $10 
+Plato: SALMON FRESCO/ Precio: $6 
+Plato: SIRLON REAL/ Precio: $16 
+Plato: MOZARELLA LUNA/ Precio: $6 
+Plato: SEARED/ Precio: STEAK$8BAKED 
+Plato: SCHROD/ Precio: $5 
+Plato: PESCADO Y CHIPS/ Precio: $8 
+Plato: SIRLON DORADO/ Precio: $12 
+Plato: COSTILLA/ Precio: $10 
+Plato: SIRLON DE SETA/ Precio: $8 
+Plato: CONSEJOS DE PLATA/ Precio: $15 
+Plato: DIP DE POLLO/ Precio: $8 
+Plato: NANCHOS/ Precio: $9 
+Plato: JUGO/ Precio: $2 
+Plato: COCA-COLA / Precio: 53 
+Plato: MUY CEREZA/ Precio: $2 
+Plato: PEPSI/ Precio: $4 
+Plato: ENSALADA DE LA CASA/ Precio: $6 
+Plato: ENSALADA CAESAR S8 STREUSEL PIE/ Precio: $4 
+Plato: ENSALADA DE POLLO/ Precio: $5 
+Plato: DOMINGO DE FUDGE/ Precio: $5 
+Plato: Empanada de pastel/ Precio: $4 
+Plato: INMUNIZADOR DE ENSALADA 4RED/ Precio: $ 
+Plato: ENSALADA DE ATÚN/ Precio: $7 
+Plato: TRATAMIENTO PETITE/ Precio: $4 
+Plato: SERVICIO DE ENTREGA: +303/ Precio: 256 

@@ -1,10 +1,10 @@
 import requests
 import matplotlib.image
 import base64
-#from maintraductor import idioma
-from tragoo import translatelanguage
 
 VISION_API_KEY = "AIzaSyAZtRpcJdd9mhTk_iMz4s5ss7O3lJwH9yM"
+
+
 
 def encode_image(image):
   image_content = image.read()
@@ -50,8 +50,8 @@ def es_precio(palabra):
     chars = set('$€')
     chars2 = set('0123456789')
     chars3 = set("',.")
-    cond = palabra['palabra'][0] <= '9' and palabra['palabra'][0] >= '0' and palabra['palabra'][len(palabra['palabra'])-1] <= '9' and palabra['palabra'][len(palabra['palabra'])-1]
-    if cond or any((c in chars) for c in palabra['palabra']) or (any((c in chars2) for c in palabra['palabra']) and any((c in chars3) for c in palabra['palabra'])):
+    if any((c in chars) for c in palabra['palabra']) or (any((c in chars2) for c in palabra['palabra']) and any((c in chars3) for c in palabra['palabra'])):
+    #if palabra['palabra'][0] <= '9' and palabra['palabra'][0] >= '0' or palabra['palabra'][0] == '$' or palabra['palabra'][0] == '€' or palabra['palabra'][0:3] == "CZK":
         return True
     else:
         return False
@@ -109,10 +109,50 @@ for palabra in palabrasPlatos:
     platomin['nombre'] += palabra['palabra'] + " "
 
 file = open("testfile.txt","w")
-idioma = 'es'
+
 for plato in platos:
     if plato['nombre'] != "" and plato['precio'] != "":
-        file.write("Plato: " + translatelanguage(plato['nombre'],idioma) + "/ Precio: " + plato['precio'] + "\n")
-
+        file.write("Plato: " + plato['nombre'] + "/ Precio: " + plato['precio'] + "\n")
 
 file.close()
+
+
+def lodeantes():
+
+    for palabra in palabras:
+        ya_esta = False
+
+        for plato in platos:
+            if not ya_esta and not plato['acabacolumna'] and palabra['y'] < plato['ymax'] and palabra['y'] > plato['ymin']:#si la palabra esta en la misma altura que el plato
+                if es_precio(palabra['palabra']):
+                    plato['precio'] += palabra['palabra'] + " "
+                else:
+                    plato['nombre'] += palabra['palabra'] + " "
+                ya_esta = True
+
+        if not ya_esta:
+            plato = {
+                'ymax': palabra['ymax'] + (palabra['ymax'] - palabra['y'])/2,
+                'ymin': palabra['ymin'] - (palabra['ymax'] - palabra['y'])/2,
+                'xmax': palabra['xmax'],
+                'acabacolumna': False
+            }
+            if es_precio(palabra['palabra']):
+                plato['precio'] = palabra['palabra'] + " "
+                plato['nombre'] = ""
+                if es_num(palabra['palabra']):
+                    plato['acabacolumna'] = True
+                    plato['xmax'] = palabra['xmax']
+
+            else:
+                plato['nombre'] = palabra['palabra'] + " "
+                plato['precio'] = ""
+            platos.append(plato)
+
+    file = open("testfile.txt","w")
+
+    for plato in platos:
+        if plato['nombre'] != "" and plato['precio'] != "":
+            file.write("Plato: " + plato['nombre'] + "/ Precio: " + plato['precio'] + "\n")
+
+    file.close()

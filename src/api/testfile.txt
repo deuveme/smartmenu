@@ -1,26 +1,15 @@
-Plato: Alas sin hueso/ Precio: $10 
-Plato: SALMON FRESCO/ Precio: $6 
-Plato: SIRLON REAL/ Precio: $16 
-Plato: MOZARELLA LUNA/ Precio: $6 
-Plato: SEARED/ Precio: STEAK$8BAKED 
-Plato: SCHROD/ Precio: $5 
-Plato: PESCADO Y CHIPS/ Precio: $8 
-Plato: SIRLON DORADO/ Precio: $12 
-Plato: COSTILLA/ Precio: $10 
-Plato: SIRLON DE SETA/ Precio: $8 
-Plato: CONSEJOS DE PLATA/ Precio: $15 
-Plato: DIP DE POLLO/ Precio: $8 
-Plato: NANCHOS/ Precio: $9 
-Plato: JUGO/ Precio: $2 
-Plato: COCA-COLA / Precio: 53 
-Plato: MUY CEREZA/ Precio: $2 
-Plato: PEPSI/ Precio: $4 
-Plato: ENSALADA DE LA CASA/ Precio: $6 
-Plato: ENSALADA CAESAR S8 STREUSEL PIE/ Precio: $4 
-Plato: ENSALADA DE POLLO/ Precio: $5 
-Plato: DOMINGO DE FUDGE/ Precio: $5 
-Plato: Empanada de pastel/ Precio: $4 
-Plato: INMUNIZADOR DE ENSALADA 4RED/ Precio: $ 
-Plato: ENSALADA DE ATÚN/ Precio: $7 
-Plato: TRATAMIENTO PETITE/ Precio: $4 
-Plato: SERVICIO DE ENTREGA: +303/ Precio: 256 
+Plato: g pepino/ Precio: 2.4 CHF
+Plato: g Hlerb mixto/ Precio: 2.96 CHF
+Plato: g griego/ Precio: 5.01 CHF
+Plato: g César CzK/ Precio: 152.59 CHF
+Plato: Ensalada G Con Salmón A La Parrilla/ Precio: 6.06 CHF
+Plato: Pastel de manzana casero de pc/ Precio: 2.57 CHF
+Plato: pastel de zanahoria pc/ Precio: 2.57 CHF
+Plato: Pcs &quot;Profiteroles&quot; Cream Puffs con salsa de frutas/ Precio: 2.83 CHF
+Plato: Crepes PC/ Precio: 3.01 CHF
+Plato: Placer Cálido PC/ Precio: 3.01 CHF
+Plato: Bola de helado/ Precio: 1.09 CHF
+Plato: Al Horno En Tinfoil Con Tomillo/ Precio: 1.53 CHF
+Plato: pcs/ Precio: 1.53 CHF
+Plato: pcs/ Precio: 1.53 CHF
+Plato: pcs/ Precio: 1.4 CHF

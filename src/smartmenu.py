@@ -59,7 +59,7 @@ def obtain():
             response_without_translate = hace_todo(parcial)
             for plato in response_without_translate:
                 if plato['nombre'] != "" and plato['precio'] != "":
-                    plato['nombre'] = translatelanguage(plato['nombre'], idioma)
+                    plato['nombreTraducido'] = translatelanguage(plato['nombre'], 'fr')
             return render_template('result.html', params=response_without_translate)
         except:
             print("Error: Couldn't retrieve the image and decode it.")

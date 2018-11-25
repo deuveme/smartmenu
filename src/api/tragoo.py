@@ -19,7 +19,7 @@ def translatelanguage(texte,idioma):
         'key': VISION_API_KEY
     }
     response =requests.post('https://translation.googleapis.com/language/translate/v2', params=payload).json()
-    print (response['data']['translations'][0]['translatedText'])
+    return (response['data']['translations'][0]['translatedText'])
 
 translatelanguage(texte,idioma)
 

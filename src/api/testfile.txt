@@ -1,0 +1,13 @@
+Plato: Manchuria vegetal/ Precio: 80-00 
+Plato: Gobi Manchuria/ Precio: 100-00 
+Plato: Paneer Manchuria/ Precio: 120-00 
+Plato: Manchuria De Setas/ Precio: 120-00 
+Plato: paneer/ Precio: 65 120-00 
+Plato: Vegetal/ Precio: 65 120-00 
+Plato: De la fritura/ Precio: 70-00 
+Plato: Tamato Curry/ Precio: 70-00 
+Plato: Palak liso/ Precio: 80-00 
+Plato: Curry de verduras/ Precio: 100-0 
+Plato: Kadai Vegetal/ Precio: 120-00 
+Plato: Swiss Spl. Curry de verduras/ Precio: 120-00 
+Plato: Kadal Paneer/ Precio: 120-00 

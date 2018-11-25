@@ -7,7 +7,7 @@ def busca_img(query):
         "q": query,
         "num": 1,
         "start": 1,
-        "imgSize": "medium",
+        "imgSize": "small",
         "searchType": "image",
         "key": VISION_API_KEY,
         "cx": "001729826209899299709:luisubz3cc4"

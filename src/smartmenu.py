@@ -6,6 +6,8 @@ from api.vision import hace_todo
 
 from api.tragoo import translatelanguage
 
+from api.imgsearch import busca_img
+
 from locale import getdefaultlocale
 
 app = Flask(__name__, template_folder='templates/')
@@ -48,6 +50,8 @@ def obtain():
             bagimageext = bagimageformat.split('/')[-1]
             parcial = bagimagefile
             response_without_translate = hace_todo(parcial)
+            for plato in response_without_translate:
+                plato['photo'] = busca_img(plato['nombre'])
             for plato in response_without_translate:
                 if plato['nombre'] != "" and plato['precio'] != "":
                     plato['nombre'] = translatelanguage(plato['nombre'], idioma)

@@ -4,12 +4,12 @@
   <title>SmartMenu</title>
   <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8">-->
   <link rel="shortcut icon" href="{{ url_for('static', filename='/img/favicon.ico') }}">
-  <!--<link rel="icon" href="{{ url_for('static', filename='../images/favicon.ico') }}" type="image/x-icon">-->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="static/js/principal.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="../static/styles/principal.css" />
   <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
 </head>
@@ -18,6 +18,13 @@
 <body class="container">
  <div class="row main-row">
     <h1 class="title">SmartMenu</h1>
+ </div>
+ <div class="row main-row" id="photomod">
+   <video id="video"></video>
+	<br>
+	<!--<button id="boton">Tomar foto</button>-->
+	<p id="estado"></p>
+	<canvas id="canvas" style="display: none;"></canvas>
  </div>
  <div class="row main-row">
     <button type="button" class="btn btn-primary btn-lg" onclick="clickit()"><i class="fa fa-camera"></i></button>
@@ -29,7 +36,7 @@
 	<p id="estado" class="state"></p>
 	<canvas id="canvas" class="canvas" style="display: none;"></canvas>
 -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-  <!-- <script src="../static/js/principal.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="static/js/raimon.js"></script>
 </body>
 </html>

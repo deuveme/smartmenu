@@ -11,16 +11,18 @@ def render_static():
     return render_template('principal.html')
 
 
-app.run(host="0.0.0.0", port=9090)
 
 @app.route('/prueba')
 def prueba():
-    response = [{nombre:"Verduras Fritas", precio:"12.50"},
-                {nombre: "Quiche", precio: "20.55"},
-                {nombre: "Ternera Frita", precio: "60.25"},
-                {nombre: "Verdurs Fritas", precio:"13.00"},
-                {nombre: "Fondue", precio: "50.50"},
-                {nombre: "Agua", precio: "5.00"}]
+    
+    print("Entro en pruebas")
+    response = []
+    i = 1;
+    for i in range(1,10):
+        parcial = {}
+        parcial["nombre"] = "Veerduras Fritas"
+        parcial["precio"] = "12.50 CHF"
+        response.append(parcial)
                 
     return render_template('result.html', params=response)
 
@@ -54,3 +56,4 @@ def search():
     return render_template('result.html')
 
 
+app.run(host="0.0.0.0", port=9090)

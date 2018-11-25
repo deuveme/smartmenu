@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SmartMenu</title>
+   <link rel="shortcut icon" href="{{ url_for('static', filename='/img/favicon.ico') }}">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="../static/styles/principal.css" />
+  </head>
+<header>
+</header>
+<body class="container">
+ <div class="row main-row">
+    <h1 class="title">SmartMenu</h1>
+ </div>
+ <body class="container">
+ <div class="row main-row">
+    <h2 class="title">Menu</h2>
+ </div>
+ <div class="row main-row">
+ {% for item in response %}
+            <div class="col-6">{% item.nombre %}</div>
+            <div class="col-6">{% item.precio %}</div
+{% endfor %}
+</div>

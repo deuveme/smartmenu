@@ -19,11 +19,13 @@ def prueba():
     response = []
     i = 1;
     for i in range(1,10):
+        print (i)
         parcial = {}
         parcial["nombre"] = "Veerduras Fritas"
         parcial["precio"] = "12.50 CHF"
         response.append(parcial)
-                
+        
+    print(response)           
     return render_template('result.html', params=response)
 
 @app.route('/dataloggin', methods=['POST'])

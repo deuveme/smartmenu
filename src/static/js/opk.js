@@ -11,18 +11,13 @@ function uploadfile(){
         $("#preview").show();
         $("#upload").hide();
         preview.src = reader.result;
-        console.log(reader.result)
-        document.getElementById('scan-file').value = reader.result;
-        console.log(document.getElementById('scan-file').value)
-        print("done");
-        $('#success').show();
-        $('#prime').hide();        
+        document.getElementById('scan-file').value = reader.result;    
     }
 
     if (file) {
-        console.log("oli")
         reader.readAsDataURL(file); //reads the data as a URL
     } else {
         preview.src = "";
     }
+
 }

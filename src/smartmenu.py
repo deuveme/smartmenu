@@ -35,13 +35,20 @@ def obtain():
             try:
                 bagimageformat, bagimagefile = bagimage.split(';base64,')
                 bagimageext = bagimageformat.split('/')[-1]
-                bag.image = ContentFile(base64.b64decode(bagimagefile),
-                                        name=(str(time.time()).split('.')[0] + '-' + userid + '.' + bagimageext))
+                #bag.image = ContentFile(base64.b64decode(bagimagefile),
+                 #                       name=(str(time.time()).split('.')[0] + '-' + userid + '.' + bagimageext))
+                #filename = photos.save(base64.b64decode(bagimagefile))
+                #rec = Photo(filename=filename, user=g.user.id)
+                #rec.store()
+                #flash("Photo saved.")
+
+                #response = funciondefinitiva(base64.b64decode(bagimagefile).decode('utf-8'))
+                #return render_template('result.html', params=response)
             except:
                 print("Error: Couldn't retrieve the image and decode it.")
 
     response = funciondefinitiva(bag.image)
-    return render_template('result.html', params=response)
+    return render_template('result.html')
 
 @app.route('/result')
 def search():

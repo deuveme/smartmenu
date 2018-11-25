@@ -15,7 +15,7 @@
 </head>
 <header>
 </header>
-<body class="container">
+<body class="container" onload="uploadfile()">
  <div class="row main-row">
     <h1 class="title">SmartMenu</h1>
  </div>
@@ -27,11 +27,16 @@
 	<canvas id="canvas" style="display: none;"></canvas>
  </div>
  <div class="row main-row">
-    <form id="baggage-form" action="/dataloggin" method="post">
-	 <input type="hidden" class="form-control" id="scan-file" name="image" />
-
-    <button type="button" class="btn btn-primary btn-lg" onclick="clickit()"><i class="fa fa-camera"></i></button>
-    </form>
+    <div class="col-6">
+      <form id="baggage-form" action="/dataloggin" method="post">
+         <input type="hidden" class="form-control" id="scan-file" name="image" />
+         <button type="button" class="btn btn-primary btn-lg" onclick="clickit()"><i class="fa fa-camera"></i></button>
+      </form>
+    </div>
+    <div class="col-6">
+      <input type="file" onchange="previewFile()"><br>
+      <img src="" height="200" alt="Preview">
+    </div>
  </div>
 <!--
 	<video id="video" class="video"></video>
@@ -41,6 +46,6 @@
 	<canvas id="canvas" class="canvas" style="display: none;"></canvas>
 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="static/js/raimon.js"></script>
+  <script type="text/javascript" src="static/js/ko.js"></script>
 </body>
 </html>

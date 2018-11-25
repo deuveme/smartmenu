@@ -2,7 +2,7 @@ import requests
 import matplotlib.image
 import base64
 #from maintraductor import idioma
-from tragoo import translatelanguage
+#from tragoo import translatelanguage
 import re
 
 VISION_API_KEY = "AIzaSyAZtRpcJdd9mhTk_iMz4s5ss7O3lJwH9yM"
@@ -142,7 +142,7 @@ def hace_todo(imgpath):
         platomin['nombre'] += palabra['palabra'] + " "
 
     file = open("testfile.txt","w")
-    idioma = 'es'
+
     platos = sorted(platos, key=sort_platos)
     platosFinal = []
     for plato in platos:

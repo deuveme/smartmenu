@@ -22,30 +22,26 @@
  <div class="row main-row" id="photomod">
    <video id="video"></video>
 	<br>
-	<!--<button id="boton">Tomar foto</button>-->
+	<button id="boton" class="btn btn-primary btn-lg"><i class="fa fa-camera"></i></button>
 	<p id="estado"></p>
 	<canvas id="canvas" style="display: none;"></canvas>
  </div>
+ <div class="row main-row" id="preview">
+      <img src="" height="200" alt="Preview">
+ </div>
  <div class="row main-row">
     <div class="col-6">
-      <form id="baggage-form" action="/dataloggin" method="post">
+      <form id="baggage-form" action="/dataloggin" method="post" enctype="multipart/form-data">
          <input type="hidden" class="form-control" id="scan-file" name="image" />
-         <button type="button" class="btn btn-primary btn-lg" onclick="clickit()"><i class="fa fa-camera"></i></button>
+         <button type="button" class="btn btn-primary btn-lg" onclick="clickit()" id="prime"><i class="fa fa-camera"></i></button>
+         <button class="btn btn-primary btn-lg" name="checkin" id="success">Upload</button>
       </form>
     </div>
     <div class="col-6">
-      <input type="file" onchange="previewFile()"><br>
-      <img src="" height="200" alt="Preview">
+      <input type="file" onchange="uploadfile()" />
     </div>
  </div>
-<!--
-	<video id="video" class="video"></video>
-	<br>
-	<button id="boton" class="btn btn-primary btn-lg toma">Tomar foto</button>
-	<p id="estado" class="state"></p>
-	<canvas id="canvas" class="canvas" style="display: none;"></canvas>
--->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="static/js/ko.js"></script>
+  <script type="text/javascript" src="static/js/re.js"></script>
 </body>
 </html>

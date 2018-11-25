@@ -2,6 +2,12 @@ from flask import Flask, render_template, request
 
 from flask_cors import CORS
 
+from api.vision import hace_todo
+
+from api.tragoo import translatelanguage
+
+from locale import getdefaultlocale
+
 app = Flask(__name__, template_folder='templates/')
 CORS(app)
 
@@ -30,24 +36,26 @@ def prueba():
 
 @app.route('/dataloggin', methods=['POST'])
 def obtain():
-    bagimage = request.args.get('image')
+    bagimage = request.form['image']
+    idioma, _ = getdefaultlocale()
+    idioma = idioma[0:2]
+    print(bagimage)
     if bagimage:
-            try:
-                bagimageformat, bagimagefile = bagimage.split(';base64,')
-                bagimageext = bagimageformat.split('/')[-1]
-                #bag.image = ContentFile(base64.b64decode(bagimagefile),
-                 #                       name=(str(time.time()).split('.')[0] + '-' + userid + '.' + bagimageext))
-                #filename = photos.save(base64.b64decode(bagimagefile))
-                #rec = Photo(filename=filename, user=g.user.id)
-                #rec.store()
-                #flash("Photo saved.")
+        print("Image Received")
+        try:
+            print("Trying to decode")
+            bagimageformat, bagimagefile = bagimage.split(';base64,')
+            bagimageext = bagimageformat.split('/')[-1]
+            parcial = bagimagefile
+            response_without_translate = hace_todo(parcial)
+            for plato in response_without_translate:
+                if plato['nombre'] != "" and plato['precio'] != "":
+                    plato['nombre'] = translatelanguage(plato['nombre'], idioma)
+            return render_template('result.html', params=response_without_translate)
+        except:
+            print("Error: Couldn't retrieve the image and decode it.")
 
-                #response = funciondefinitiva(base64.b64decode(bagimagefile).decode('utf-8'))
-                #return render_template('result.html', params=response)
-            except:
-                print("Error: Couldn't retrieve the image and decode it.")
-
-    response = funciondefinitiva(bag.image)
+    print("No image recieved")
     return render_template('result.html')
 
 @app.route('/result')

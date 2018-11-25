@@ -10,7 +10,8 @@ def busca_img(query):
         "imgSize": "small",
         "searchType": "image",
         "key": VISION_API_KEY,
-        "cx": "001729826209899299709:luisubz3cc4"
+        "cx": "001729826209899299709:luisubz3cc4",
+        "dateRestrict": "y[2]"
     }
 
     response = requests.get('https://www.googleapis.com/customsearch/v1', params=payload).json()

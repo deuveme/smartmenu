@@ -1,15 +1,1 @@
-Plato: g pepino/ Precio: 2.4 CHF
-Plato: g Hlerb mixto/ Precio: 2.96 CHF
-Plato: g griego/ Precio: 5.01 CHF
-Plato: g César CzK/ Precio: 152.59 CHF
-Plato: Ensalada G Con Salmón A La Parrilla/ Precio: 6.06 CHF
-Plato: Pastel de manzana casero de pc/ Precio: 2.57 CHF
-Plato: pastel de zanahoria pc/ Precio: 2.57 CHF
-Plato: Pcs &quot;Profiteroles&quot; Cream Puffs con salsa de frutas/ Precio: 2.83 CHF
-Plato: Crepes PC/ Precio: 3.01 CHF
-Plato: Placer Cálido PC/ Precio: 3.01 CHF
-Plato: Bola de helado/ Precio: 1.09 CHF
-Plato: Al Horno En Tinfoil Con Tomillo/ Precio: 1.53 CHF
-Plato: pcs/ Precio: 1.53 CHF
-Plato: pcs/ Precio: 1.53 CHF
-Plato: pcs/ Precio: 1.4 CHF
+https://images-na.ssl-images-amazon.com/images/I/71qr1CTqDGL._SX355_.jpg

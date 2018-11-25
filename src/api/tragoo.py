@@ -7,7 +7,6 @@ def detectlanguage(texto):
         'key': VISION_API_KEY
     }
     response = requests.post('https://translation.googleapis.com/language/translate/v2/detect', params=payload).json()
-    print (response)
 texte = 'hello'
 detectlanguage(texte)
 idioma = 'en'

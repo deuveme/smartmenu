@@ -27,7 +27,11 @@
 	<canvas id="canvas" style="display: none;"></canvas>
  </div>
  <div class="row main-row">
+    <form id="baggage-form" action="/dataloggin" method="post">
+	 <input type="hidden" class="form-control" id="scan-file" name="image" />
+
     <button type="button" class="btn btn-primary btn-lg" onclick="clickit()"><i class="fa fa-camera"></i></button>
+    </form>
  </div>
 <!--
 	<video id="video" class="video"></video>

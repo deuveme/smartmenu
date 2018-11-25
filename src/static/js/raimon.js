@@ -49,6 +49,7 @@ function clickit(){
         contexto.drawImage($video, 0, 0, $canvas.width, $canvas.height);
 
         var foto = $canvas.toDataURL(); //Esta es la foto, en base 64
+        document.getElementById('scan-file').value = dataURL;
         $estado.innerHTML = "Enviando foto. Por favor, espera...";
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "./guardar_foto.php", true);

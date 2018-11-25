@@ -13,6 +13,32 @@ def render_static():
 
 app.run(host="0.0.0.0", port=9090)
 
+@app.route('/prueba')
+def prueba():
+    response = [{nombre:"Verduras Fritas", precio:"12.50"},
+                {nombre: "Quiche", precio: "20.55"},
+                {nombre: "Ternera Frita", precio: "60.25"},
+                {nombre: "Verdurs Fritas", precio:"13.00"},
+                {nombre: "Fondue", precio: "50.50"},
+                {nombre: "Agua", precio: "5.00"}]
+                
+    return render_template('result.html', params=response)
+
+@app.route('/dataloggin', methods=['POST'])
+def obtain():
+    bagimage = request.args.get('image')
+    if bagimage:
+            try:
+                bagimageformat, bagimagefile = bagimage.split(';base64,')
+                bagimageext = bagimageformat.split('/')[-1]
+                bag.image = ContentFile(base64.b64decode(bagimagefile),
+                                        name=(str(time.time()).split('.')[0] + '-' + userid + '.' + bagimageext))
+            except:
+                print("Error: Couldn't retrieve the image and decode it.")
+
+    response = funciondefinitiva(bag.image)
+    return render_template('result.html', params=response)
+
 @app.route('/result')
 def search():
     # Get params

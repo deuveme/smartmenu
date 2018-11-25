@@ -16,9 +16,16 @@ CORS(app)
 
 @app.route('/')
 def render_static():
+    return render_template('inicio.html')
+
+
+@app.route('/camara')
+def camara():
     return render_template('principal.html')
 
-
+@app.route('/upload')
+def upload():
+    return render_template('upload.html')
 
 @app.route('/prueba')
 def prueba():

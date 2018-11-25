@@ -14,32 +14,26 @@
   <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
 </head>
 <header>
- <h1 class="title">SmartMenu</h1>
+    <h1 class="title">SmartMenu</h1>
 </header>
 <body class="container" onload="uploadfile()">
- <div class="row main-row" id="photomod">
-   <video id="video"></video>
-	<br>
-	<button id="boton" class="btn btn-primary btn-lg"><i class="fa fa-camera"></i></button>
-	<p id="estado"></p>
-	<canvas id="canvas" style="display: none;"></canvas>
- </div>
  <div class="row main-row" id="preview">
       <img src="" height="200" alt="Preview">
  </div>
  <div class="row main-row">
-    <div class="col-6">
+    <div class="col-12" id="imag" align="center">
       <form id="baggage-form" action="/dataloggin" method="post" enctype="multipart/form-data">
          <input type="hidden" class="form-control" id="scan-file" name="image" />
-         <button type="button" class="btn btn-primary btn-lg" onclick="clickit()" id="prime"><i class="fa fa-camera"></i></button>
          <button class="btn btn-primary btn-lg" name="checkin" id="success">Upload</button>
       </form>
     </div>
-    <div class="col-6">
-      <input type="file" onchange="uploadfile()" />
+    <div class="col-12" id="upload">
+      <!--<input type="file" class="custom-file-input" onchange="uploadfile()" />-->
+      <input type="file" class="custom-file-input" id="customFile" onchange="uploadfile()" >
+      <label class="custom-file-label" for="customFile">Choose file</label>
     </div>
  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="static/js/re.js"></script>
+  <script type="text/javascript" src="static/js/pik.js"></script>
 </body>
 </html>

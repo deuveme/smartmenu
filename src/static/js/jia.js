@@ -1,4 +1,5 @@
 $('#success').hide();
+$('#img').hide();
 
 function tieneSoporteUserMedia() {
     return !!(navigator.getUserMedia || (navigator.mozGetUserMedia || navigator.mediaDevices.getUserMedia) || navigator.webkitGetUserMedia || navigator.msGetUserMedia)
@@ -37,8 +38,11 @@ if (tieneSoporteUserMedia()) {
                 var foto = $canvas.toDataURL(); //Esta es la foto, en base 64
                 document.getElementById('scan-file').value = foto;
                 console.log(document.getElementById('scan-file').value);
+                preview.src = foto;
                 $('#success').show();
                 $('#boton').hide();
+                $('#img').show();
+                $('#canvas').hide();
                 
                 /*$estado.innerHTML = "Enviando foto. Por favor, espera...";
                 var xhr = new XMLHttpRequest();

@@ -21,3 +21,10 @@ body {
 .columna{
     font-family: Questrial;
 }
+
+.h3 {
+    color: #ffffff;
+    align-content: center;
+    text-align: center;
+    font-size: 1em;
+}

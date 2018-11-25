@@ -18,7 +18,6 @@ CORS(app)
 def render_static():
     return render_template('inicio.html')
 
-
 @app.route('/camara')
 def camara():
     return render_template('principal.html')
@@ -65,7 +64,7 @@ def obtain():
             print("Error: Couldn't retrieve the image and decode it.")
 
     print("No image recieved")
-    return render_template('result.html')
+    return render_template('error.html')
 
 @app.route('/result')
 def search():

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="../static/styles/principal.css" />
+  <link rel="stylesheet" href="../static/styles/mainly.css" />
   </head>
 <header>
     <h1 class="title">SmartMenu</h1>
@@ -18,20 +18,14 @@
     <div class="row main-row">
         {% for item in params %}
         <div class="col-sm-6 col-md-6">
-            <div class="location-card">
-                <div class="row border-bottom">
-                <h2 class="col-8 square-title">{{ item.nombre }}</h2>
-                    <h3 class="col-4">{{ item.precio }}</h3>
-                </div>
-            </div>
+            <ul class="list-group">
+                <li class="list-group-item">{{ item.nombre }} <span class="badge badge-pill badge-danger">{{ item.precio }}</span></li>
+            </ul>
         </div>
         <div class="col-sm-6 col-md-6">
-            <div class="location-card">
-                <div class="row border-bottom">
-                <h2 class="col-8 square-title">{{ item.nombreTraducido }}</h2>
-                    <h3 class="col-4">{{ item.precioTraducido }}</h3>
-                </div>
-            </div>
+            <ul class="list-group">
+                <li class="list-group-item">{{ item.nombreTraducido }} <span class="badge badge-pill badge-primary">{{ item.precioTraducido }}</span></li>
+            </ul>
         </div>
         {% endfor %}
     </div>

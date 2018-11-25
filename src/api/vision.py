@@ -50,8 +50,8 @@ def es_precio(palabra):
     chars = set('$€')
     chars2 = set('0123456789')
     chars3 = set("',.")
-    if any((c in chars) for c in palabra['palabra']) or (any((c in chars2) for c in palabra['palabra']) and any((c in chars3) for c in palabra['palabra'])):
-    #if palabra['palabra'][0] <= '9' and palabra['palabra'][0] >= '0' or palabra['palabra'][0] == '$' or palabra['palabra'][0] == '€' or palabra['palabra'][0:3] == "CZK":
+    cond = palabra['palabra'][0] <= '9' and palabra['palabra'][0] >= '0' and palabra['palabra'][len(palabra['palabra'])-1] <= '9' and palabra['palabra'][len(palabra['palabra'])-1]
+    if cond or any((c in chars) for c in palabra['palabra']) or (any((c in chars2) for c in palabra['palabra']) and any((c in chars3) for c in palabra['palabra'])):
         return True
     else:
         return False

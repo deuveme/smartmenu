@@ -12,13 +12,15 @@ Plato: CONSEJOS DE PLATA/ Precio: $15
 Plato: DIP DE POLLO/ Precio: $8 
 Plato: NANCHOS/ Precio: $9 
 Plato: JUGO/ Precio: $2 
+Plato: COCA-COLA / Precio: 53 
 Plato: MUY CEREZA/ Precio: $2 
 Plato: PEPSI/ Precio: $4 
 Plato: ENSALADA DE LA CASA/ Precio: $6 
-Plato: 53 CAESAR SALAD COCA-COLA S8 STREUSEL PIE / Precio: $4 
+Plato: ENSALADA CAESAR S8 STREUSEL PIE/ Precio: $4 
 Plato: ENSALADA DE POLLO/ Precio: $5 
 Plato: DOMINGO DE FUDGE/ Precio: $5 
-Plato: 4 pastas de caramelo/ Precio: $4 
+Plato: Empanada de pastel/ Precio: $4 
 Plato: INMUNIZADOR DE ENSALADA 4RED/ Precio: $ 
 Plato: ENSALADA DE ATÚN/ Precio: $7 
 Plato: TRATAMIENTO PETITE/ Precio: $4 
+Plato: SERVICIO DE ENTREGA: +303/ Precio: 256 

@@ -1,7 +1,8 @@
 import requests
 import matplotlib.image
 import base64
-from maintraductor import idioma
+#from maintraductor import idioma
+from tragoo import translatelanguage
 
 VISION_API_KEY = "AIzaSyAZtRpcJdd9mhTk_iMz4s5ss7O3lJwH9yM"
 
@@ -86,10 +87,10 @@ for palabra in palabras:
         platos.append(plato)
 
 file = open("testfile.txt","w")
-
+idioma = 'es'
 for plato in platos:
     if plato['nombre'] != "" and plato['precio'] != "":
-        file.write("Plato: " + idioma(plato['nombre']) + "/ Precio: " + plato['precio'] + "\n")
+        file.write("Plato: " + translatelanguage(plato['nombre'],idioma) + "/ Precio: " + plato['precio'] + "\n")
 
 
 file.close()

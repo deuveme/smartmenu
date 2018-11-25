@@ -58,8 +58,6 @@ def obtain():
             parcial = bagimagefile
             response_without_translate = hace_todo(parcial)
             for plato in response_without_translate:
-                plato['photo'] = busca_img(plato['nombre'])
-            for plato in response_without_translate:
                 if plato['nombre'] != "" and plato['precio'] != "":
                     plato['nombre'] = translatelanguage(plato['nombre'], idioma)
             return render_template('result.html', params=response_without_translate)

@@ -152,11 +152,12 @@ def hace_todo(imgpath):
         if platoFinal['precio'] != "error":
             platosFinal.append(platoFinal)
 
-    for plato in platosFinal:
-        if plato['nombre'] != "" and plato['precio'] != "":
-            file.write("Plato: " + translatelanguage(plato['nombre'],idioma) + "/ Precio: " + plato['precio'] + "\n")
+    #for plato in platosFinal:
+    #    if plato['nombre'] != "" and plato['precio'] != "":
+    #        file.write("Plato: " + translatelanguage(plato['nombre'],idioma) + "/ Precio: " + plato['precio'] + "\n")
 
+    #file.close()
 
-    file.close()
+    return platosFinal
 
 #hace_todo(imgpath)
